@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  height: fit-content;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  background: transparentize;
+  border: none;
+}
+
+img {
+  display: inline-block;
+  object-fit: cover;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Serif Display", serif;
+}
+
+nav {
+  padding: 19px 156px 19px 159px;
+}
+
+@media only screen and (max-width: 74.9375rem) {
+  nav,
+.m-nav-padding {
+    padding: 24px 31px;
+  }
+}
+
+.button-dark, .button-light {
+  padding: 15px 26px;
+}
+
+html {
+  box-sizing: inherit;
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+.button-dark {
+  display: inline-block;
+  color: #2b272f;
+  border: 2px solid #2b272f;
+}
+.button-dark:hover {
+  background-color: #2b272f;
+  color: #fafafa;
+}
+.button-light {
+  display: inline-block;
+  color: #fafafa;
+  border: 2px solid #fafafa;
+}
+.button-light:hover {
+  color: #2b272f;
+  background-color: #fafafa;
+}
+
+a {
+  color: #95a9c6;
+  transition: 0.3s all ease-in-out;
+}
+a:hover {
+  color: #2b272f;
+}
+
+.flex {
+  display: flex;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-sa {
+  justify-content: space-around;
+}
+.flex-jc-se {
+  justify-content: space-evenly;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-ai-c {
+  align-items: center;
+}
+.flex-ai-s {
+  align-items: start;
+}
+
+nav {
+  min-height: 76px;
+  background: white;
+}
+nav li {
+  text-transform: uppercase;
+}
+nav li:not(:last-child) {
+  margin-right: 19px;
+  margin-top: 18px;
+}
+
+ul.nav-links.open {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  margin: 50px 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #2d2640;
+  padding-top: 53px;
+  padding: 53px 2rem;
+}
+ul.nav-links.open > li {
+  margin-top: 49px;
+}
+ul.nav-links.open > li a {
+  display: block;
+}
+
+.menu-open,
+.menu-close {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-close.open {
+  display: block;
+}
+
+@media only screen and (max-width: 43.0625rem) {
+  .med-down-invisible {
+    display: none;
+  }
+}
+@media only screen and (max-width: 74.9375rem) {
+  .med-down-visible {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

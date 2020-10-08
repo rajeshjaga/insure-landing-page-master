@@ -1,0 +1,13 @@
+@use 'media';
+%nav-padding {
+  padding: 19px 156px 19px 159px;
+}
+%m-nav-padding,
+.m-nav-padding {
+  @include media.breakDown(medium) {
+    padding: 24px 31px;
+  }
+}
+%button-padding {
+  padding: 15px 26px;
+}

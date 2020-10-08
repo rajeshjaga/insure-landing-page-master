@@ -1,0 +1,20 @@
+@use '../designs/color';
+@use '../designs/spacing';
+@mixin buttonGen($color) {
+  @extend %button-padding;
+  @if $color==dark {
+    color: color.$VeryDarkViolet;
+    border: 2px solid color.$VeryDarkViolet;
+    &:hover {
+      background-color: color.$VeryDarkViolet;
+      color: color.$VeryLightGray;
+    }
+  } @else if $color==light {
+    color: color.$VeryLightGray;
+    border: 2px solid color.$VeryLightGray;
+    &:hover {
+      color: color.$VeryDarkViolet;
+      background-color: color.$VeryLightGray;
+    }
+  }
+}

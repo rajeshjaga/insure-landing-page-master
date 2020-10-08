@@ -1,0 +1,45 @@
+@use '../designs/spacing';
+@use '../designs/color';
+nav {
+  @extend %nav-padding;
+  @extend %m-nav-padding;
+  min-height: 76px;
+  background: color.$white;
+  li {
+    text-transform: uppercase;
+    &:not(:last-child) {
+      margin-right: 19px;
+      margin-top: 18px;
+    }
+  }
+}
+ul.nav-links {
+  &.open {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin: 50px 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: color.$DarkViolet;
+    padding-top: 53px;
+    padding: 53px 2rem;
+    > li {
+      a {
+        display: block;
+      }
+      margin-top: 49px;
+    }
+  }
+}
+.menu-open,
+.menu-close {
+  display: none;
+  cursor: pointer;
+}
+.menu-close.open {
+  display: block;
+}

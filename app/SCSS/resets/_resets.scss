@@ -1,0 +1,25 @@
+@use '../designs/color';
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: color.$black;
+  height: fit-content;
+}
+li {
+  list-style: none;
+}
+button {
+  cursor: pointer;
+  background: transparentize;
+  border: none;
+}
+img {
+  display: inline-block;
+  object-fit: cover;
+}
