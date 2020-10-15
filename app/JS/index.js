@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuOpen = document.getElementById("menu-open");
     const menuClose = document.getElementById("menu-close");
+    const navLists = document.querySelector('.nav-container');
     menuOpen.addEventListener('click', () => {
-        menuOpen.style.display = "none";
-        menuClose.style.display = "block";
+        navLists.classList.add('open')
     })
     menuClose.addEventListener('click', () => {
-        menuClose.style.display = "none";
-        menuOpen.style.display = "block";
+        navLists.classList.remove('open')
     })
 })

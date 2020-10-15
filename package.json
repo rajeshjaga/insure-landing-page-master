@@ -4,7 +4,8 @@
   "description": "![Design preview for the Insure landing page coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "start": "sass --watch app/SCSS/style.scss public/style/style.css"
+    "start": "sass --watch app/SCSS/style.scss public/style/style.css",
+    "build": "sass app/SCSS/style.scss public/style/style.css"
   },
   "author": "",
   "license": "ISC",

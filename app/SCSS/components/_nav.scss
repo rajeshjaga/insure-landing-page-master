@@ -1,45 +1,97 @@
 @use '../designs/spacing';
 @use '../designs/color';
+@use '../designs/media';
+@use '../prefix/mediahelper';
 nav {
   @extend %nav-padding;
   @extend %m-nav-padding;
   min-height: 76px;
   background: color.$white;
+  .nav-container {
+    position: relative;
+  }
   li {
     text-transform: uppercase;
-    &:not(:last-child) {
+    &:not(:nth-last-child(2)) {
       margin-right: 19px;
       margin-top: 18px;
     }
   }
-}
-ul.nav-links {
-  &.open {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    margin: 50px 0;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background: color.$DarkViolet;
-    padding-top: 53px;
-    padding: 53px 2rem;
-    > li {
-      a {
+  img {
+    cursor: pointer;
+    &.mob-nav-pat {
+      display: none;
+      cursor: none;
+      @include media.breakDown(medium) {
         display: block;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        object-fit: cover;
       }
-      margin-top: 49px;
     }
   }
 }
+ul.nav-links {
+  @include media.breakDown(medium) {
+    display: flex;
+    height: 80%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    margin-top: 80px;
+    text-align: center;
+    background: color.$VeryDarkViolet;
+    transform: translateY(-150%);
+    transition: all 0.2s ease-in-out;
+    padding-top: 53px;
+    padding: 53px 2rem;
+    transition: transform 0.5s ease-in-out;
+    > li {
+      letter-spacing: 0.75px;
+      text-align: center;
+      a {
+        display: block;
+        color: color.$VeryLightGray;
+        border-color: color.$VeryLightGray;
+      }
+      margin-top: 49px;
+    }
+    &:after {
+      content: "";
+      height: 14%;
+      width: 100%;
+      position: absolute;
+      bottom: -101px;
+      left: 0;
+      background: color.$VeryLightGray;
+    }
+  }
+}
+
 .menu-open,
 .menu-close {
   display: none;
-  cursor: pointer;
 }
-.menu-close.open {
-  display: block;
+.menu-open {
+  @include media.breakDown(medium) {
+    display: block;
+  }
+}
+.nav-container.open {
+  ul {
+    @include media.breakDown(medium) {
+      transform: translateY(0%);
+    }
+  }
+  .menu-open {
+    display: none;
+  }
+  .menu-close {
+    display: block;
+  }
 }

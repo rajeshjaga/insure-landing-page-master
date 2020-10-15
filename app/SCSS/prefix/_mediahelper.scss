@@ -1,11 +1,16 @@
 @use '../designs/media';
-@include media.breakDown(small) {
-  .med-down-invisible {
+@include media.breakUp(medium) {
+  .med-up-invisible {
     display: none;
   }
 }
 @include media.breakDown(medium) {
   .med-down-visible {
+    display: block;
+  }
+}
+%med-down-visible {
+  @include media.breakDown(medium) {
     display: block;
   }
 }
