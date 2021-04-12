@@ -5,16 +5,16 @@
 nav {
   @extend %nav-padding;
   @extend %m-nav-padding;
-  min-height: 76px;
+  height: 76px;
   background: color.$white;
   .nav-container {
     position: relative;
+    height: 100%;
   }
   li {
     text-transform: uppercase;
     &:not(:nth-last-child(2)) {
       margin-right: 19px;
-      margin-top: 18px;
     }
   }
   img {

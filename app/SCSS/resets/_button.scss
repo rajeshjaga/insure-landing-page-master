@@ -1,20 +1,20 @@
-@use '../designs/color';
-@use '../designs/spacing';
-@mixin buttonGen($color) {
-  @extend %button-padding;
-  @if $color==dark {
+@use "../designs/color";
+.btn {
+  background: transparent;
+  border-width: 1px;
+  padding: 1rem 2.5rem;
+  border-style: solid;
+  font-weight: 600;
+  &-dark {
     color: color.$VeryDarkViolet;
-    border: 2px solid color.$VeryDarkViolet;
+    border-color: color.$VeryDarkViolet;
     &:hover {
-      background-color: color.$VeryDarkViolet;
-      color: color.$VeryLightGray;
+      background: color.$VeryDarkViolet;
+      color: color.$white;
     }
-  } @else if $color==light {
-    color: color.$VeryLightGray;
-    border: 2px solid color.$VeryLightGray;
-    &:hover {
-      color: color.$VeryDarkViolet;
-      background-color: color.$VeryLightGray;
-    }
+  }
+  &-light {
+    color: color.$white;
+    border-color: color.$white;
   }
 }

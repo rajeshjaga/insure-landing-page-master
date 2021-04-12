@@ -42,52 +42,30 @@ h6 {
   font-family: "DM Serif Display", serif;
 }
 
-nav {
-  padding: 19px 156px 19px 159px;
+.btn {
+  background: transparent;
+  border-width: 1px;
+  padding: 1rem 2.5rem;
+  border-style: solid;
+  font-weight: 600;
 }
-
-@media only screen and (max-width: 74.9375rem) {
-  nav,
-.m-nav-padding {
-    padding: 24px 31px;
-  }
+.btn-dark {
+  color: #2b272f;
+  border-color: #2b272f;
 }
-
-.button-dark, .button-light {
-  padding: 15px 26px;
+.btn-dark:hover {
+  background: #2b272f;
+  color: white;
+}
+.btn-light {
+  color: white;
+  border-color: white;
 }
 
 html {
   box-sizing: inherit;
   font-size: 100%;
   scroll-behavior: smooth;
-}
-
-.button-dark {
-  display: inline-block;
-  color: #2b272f;
-  border: 2px solid #2b272f;
-}
-.button-dark:hover {
-  background-color: #2b272f;
-  color: #fafafa;
-}
-.button-light {
-  display: inline-block;
-  color: #fafafa;
-  border: 2px solid #fafafa;
-}
-.button-light:hover {
-  color: #2b272f;
-  background-color: #fafafa;
-}
-
-a {
-  color: #95a9c6;
-  transition: 0.3s all ease-in-out;
-}
-a:hover {
-  color: #2b272f;
 }
 
 .flex {
@@ -115,6 +93,26 @@ a:hover {
   align-items: start;
 }
 
+.height-100 {
+  height: 100%;
+}
+
+nav {
+  padding: 19px 156px 19px 159px;
+}
+
+@media only screen and (max-width: 74.9375rem) {
+  nav,
+.m-nav-padding {
+    padding: 24px 31px;
+  }
+}
+
+.width-80 {
+  width: 80%;
+  margin: 0 auto;
+}
+
 @media only screen and (min-width: 43.125rem) {
   .med-up-invisible {
     display: none;
@@ -126,18 +124,18 @@ a:hover {
   }
 }
 nav {
-  min-height: 76px;
+  height: 76px;
   background: white;
 }
 nav .nav-container {
   position: relative;
+  height: 100%;
 }
 nav li {
   text-transform: uppercase;
 }
 nav li:not(:nth-last-child(2)) {
   margin-right: 19px;
-  margin-top: 18px;
 }
 nav img {
   cursor: pointer;
@@ -218,6 +216,35 @@ nav img.mob-nav-pat {
 }
 .nav-container.open .menu-close {
   display: block;
+}
+
+.hero {
+  min-height: 70vh;
+  background: #2c2640;
+}
+.hero-description {
+  width: 60%;
+}
+.hero-description h1 {
+  letter-spacing: 1px;
+  color: white;
+  font-size: 4rem;
+}
+.hero-description p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 80%;
+  color: white;
+}
+.hero-img {
+  height: 70vh;
+  width: 40%;
+  position: relative;
+}
+.hero-img img {
+  position: absolute;
+  top: 10%;
+  left: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

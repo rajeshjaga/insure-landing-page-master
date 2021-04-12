@@ -8,20 +8,3 @@ html {
   font-size: 100%;
   scroll-behavior: smooth;
 }
-.button {
-  &-dark {
-    display: inline-block;
-    @include button.buttonGen($color: dark);
-  }
-  &-light {
-    display: inline-block;
-    @include button.buttonGen($color: light);
-  }
-}
-a {
-  color: color.$GrayishBlue;
-  &:hover {
-    color: color.$VeryDarkViolet;
-  }
-  transition: 0.3s all ease-in-out;
-}

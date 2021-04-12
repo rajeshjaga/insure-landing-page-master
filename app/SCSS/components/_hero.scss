@@ -1,0 +1,29 @@
+@use "../designs/color";
+.hero {
+  min-height: 70vh;
+  background: #2c2640;
+  &-description {
+    width: 60%;
+    h1 {
+      letter-spacing: 1px;
+      color: color.$white;
+      font-size: 4rem;
+    }
+    p {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      width: 80%;
+      color: color.$white;
+    }
+  }
+  &-img {
+    height: 70vh;
+    width: 40%;
+    position: relative;
+    img {
+      position: absolute;
+      top: 10%;
+      left: 0;
+    }
+  }
+}
